@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Test Extension",
+    "version": "0.1",
+    "description": "A Proof of Concept Extension that shows when a external joypad supported by GamepadAPI is connected",
+    "content_scripts": [
+        {
+          "matches": [
+            "<all_urls>"
+          ],
+          "js": ["jquery-3.4.1.js","content.js"]
+        }
+      ],
+    "browser_action": {
+        "default_icon": "game-controller.png",
+        "default_popup": "popup/index.html"
+      },
+    "background": {
+        "scripts": ["background.js"]
+      }
+  }
